@@ -53,15 +53,3 @@ jobs:
         with:
           name: BZDPatcher-win2000
           path: dist
-
-      - name: Create release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ inputs.tag }}
-          name: BZDPatcher Win2000 ${{ inputs.tag }}
-          files: |
-            dist/BZDPatcher_Win2000_Setup.exe
-            dist/XPSH.dll
-            dist/reg.exe
-          draft: false
-          prerelease: false
